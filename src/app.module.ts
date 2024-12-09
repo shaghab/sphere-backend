@@ -6,7 +6,7 @@ import { PostsModule } from './posts/posts.module';
 import { GroupsModule } from './groups/groups.module';
 
 @Module({
-  imports: [UsersModule, PostsModule, GroupsModule],
+  imports: [MongooseModule.forRoot('mongodb://localhost/sphere'), UsersModule, PostsModule, GroupsModule],
   controllers: [AppController],
   providers: [AppService],
 })
